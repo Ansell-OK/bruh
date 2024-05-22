@@ -23,3 +23,6 @@ def classify_text():
 @app.route('/')
 def index():
     return 'Golie'
+
+if __name__ == "__main__":
+    app.run(debug=True)
