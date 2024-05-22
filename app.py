@@ -5,13 +5,8 @@ app = Flask(__name__)
 
 model = tf.saved_model.load("dokinta_model")
 
-@app.route('/')
-def index():
-    return 'Hey Golie'
-
 @app.route('/predict', methods=['POST'])
 def classify_text():
-
     data = request.json 
     text = data['text']
     
@@ -25,5 +20,9 @@ def classify_text():
     return jsonify(prediction)
 
 
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-
+if __name__ == '__main__':
+    app.run(debug=True)
