@@ -19,7 +19,7 @@ def classify_text():
 
     print(prediction)
     
-    return f'{prediction}'
+    return jsonify(prediction)
 
 
 @app.route('/')
