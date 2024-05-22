@@ -24,7 +24,7 @@ def classify_text():
 
 @app.route('/')
 def index():
-    return 'Hey, Golie'
+    return 'Hey,'
 
 if __name__ == '__main__':
     app.run(debug=True)
