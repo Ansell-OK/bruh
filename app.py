@@ -26,5 +26,3 @@ def classify_text():
 def index():
     return 'Hey,'
 
-if __name__ == '__main__':
-    app.run(debug=True)
